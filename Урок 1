@@ -1,0 +1,109 @@
+# Задание 1
+# Даны 2 переменных, в которых хранятся строки произвольной длины: phrase_1 и phrase_2.
+# Напишите код, который проверяет какая из этих строк длиннее.
+
+phrase_1 = input('Введите первую фразу для сравнения - ')
+phrase_2 = input('Введите вторую фразу для сравнения - ')
+if len(phrase_1) > len(phrase_2):
+  print ('Первая фраза длинее второй на ', int(len(phrase_1)) - int(len(phrase_2)) )
+elif len(phrase_1) < len(phrase_2):
+  print ('Ворая фраза длинее первой', int(len(phrase_2)) - int(len(phrase_1)) )
+else:
+  print ('Первая и вторая фразы равны')
+
+
+# Задание 2
+# Дана переменная, в которой хранится число (год). Необходимо написать программу, 
+# которая выведет, является ли данный год високосным или обычным.
+
+year = int(input("Введите год "))
+a = (year//4)
+if a*4 == year:
+  print ("Год высокосный")
+else:
+  print ("Год не высокосный")
+
+
+#Задание 3
+#Необходимо написать программу, которая будет запрашивать у пользователя,
+#месяц и дату рождения и выводить соответствующий знак зодиака.
+dayGor = int(input("Введите день "))
+monthGor = int(input("Введите месяц "))
+if (dayGor>=21 and dayGor<=32 and monthGor==3) or (monthGor==4 and dayGor>=1 and dayGor<=20):
+    print("Ваш знак зодиака: Овен")
+elif (dayGor>=21 and dayGor<=31 and monthGor==4) or (monthGor==5 and dayGor>=1 and dayGor<=20):
+    print("Ваш знак зодиака Телец")
+elif (dayGor>=21 and dayGor<=32 and monthGor==5) or (monthGor==6 and dayGor>=1 and dayGor<=21):
+    print("Ваш знак зодиака: Близнецы")
+elif (dayGor>=22 and dayGor<=31 and monthGor==6) or (monthGor==7 and dayGor>=1 and dayGor<=22):
+    print("Ваш знак зодиака: Рак")
+elif (dayGor>=23 and dayGor<=32 and monthGor==7) or (monthGor==8 and dayGor>=1 and dayGor<=23):
+    print("Ваш знак зодиака: Лев")
+elif (dayGor>=24 and dayGor<=31 and monthGor==8) or (monthGor==9 and dayGor>=1 and dayGor<=23):
+    print("Ваш знак зодиака: Дева")
+elif (dayGor>=24 and dayGor<=32 and monthGor==9) or (monthGor==10 and dayGor>=1 and dayGor<=23):
+    print("Ваш знак зодиака: Весы")
+elif (dayGor>=24 and dayGor<=31 and monthGor==10) or (monthGor==11 and dayGor>=1 and dayGor<=22):
+    print("Ваш знак зодиака: Скорпион")
+elif (dayGor>=23 and dayGor<=32 and monthGor==11) or (monthGor==12 and dayGor>=1 and dayGor<=21):
+    print("Ваш знак зодиака: Стрелец")
+elif (dayGor>=22 and dayGor<=31 and monthGor==12) or (monthGor==1 and dayGor>=1 and dayGor<=20):
+    print("Ваш знак зодиака: Козерог")
+elif (dayGor>=21 and dayGor<=31 and monthGor==1) or (monthGor==2 and dayGor>=1 and dayGor<=20):
+    print("Ваш знак зодиака: Водолей")
+elif (dayGor>=21 and dayGor<=29 and monthGor==2) or (monthGor==3 and dayGor>=1 and dayGor<=20):
+    print("Ваш знак зодиака: Рыбы")
+else: 
+   print("Указана несуществующая дата")
+
+# Задание 4
+# Вам нужно написать программу для подбора упаковок по размерам товара. 
+# Размеры (ширина, длина, высота) хранятся в переменных (в сантиметрах):
+
+width = int(input("Введите ширину товара в см."))
+length = int(input("Введите длину товара в см."))
+height = int(input("Введите высоту товара в см."))
+if width <=15 and length <=15 and height <=15:
+  print ("Вам потребуется коробка №1")
+elif width >=200 or length >=200 or height >=200:
+  print ("Вам потребуется упаковка для лыж")
+elif (width >15 and width <50) or (length >15 and length <50) or (height >15 and height <50):
+  print ("Вам потребуется коробка №2")
+else:
+  print ("Вам потребуется коробка №3")
+
+
+
+# Задание 5 (необязательное)
+# Дана переменная, в которой хранится шестизначное число (номер проездного билета). 
+# Напишите программу, которая будет определять, является ли данный билет "счастливым". 
+# Билет считается счастливым, если сумма первых трех цифр совпадает с суммой последних 
+# трех цифр номера.
+
+tikket = input("Введите номер билета ")
+if int(tikket[0]) + int(tikket[1]) + int(tikket[2]) == int(tikket[3]) + int(tikket[4]) + int(tikket[5]):
+  print ("Поздравляем! Ваш билет счастливый")
+else:
+  print("Увы! В следующий раз повезет")
+
+
+# Задание 6 (необязательное)
+# Напишите программу, которая сможет вычислять площади трех фигур 
+# (круг, треугольник и прямоугольник). Тип фигуры запрашиваем через пользовательский ввод, 
+# после чего делаем запрос характеристик фигуры:
+figure = input("Укажите фигуру из списка: прямоугольник, круг, треугольник - ")
+if figure == 'прямоугольник':
+  rectangleA = int(input("Укажите длину А - "))
+  rectangleB = int(input("Укажите длину Б - "))
+  print("Площадь прямоугольника: ", rectangleA *rectangleB)
+elif figure == 'круг':
+  circle  = int(input("Укажите радиус круга - "))
+  print("Площадь круга: ", 3.14*circle*circle)
+elif figure == 'треугольник':
+  triangleA = int(input("Укажите длину стороны А - "))
+  triangleB = int(input("Укажите длину стороны Б - "))
+  triangleC = int(input("Укажите длину стороны С - "))
+  ppol = (triangleA + triangleB + triangleC)/2
+  print("Прощадь треугольника: ", pow(ppol*(ppol-triangleA)*(ppol-triangleB)*(ppol-triangleC), 0.5))
+else:
+  print("Укажите одну из фигур: прямоугольник, круг, треугольник")
